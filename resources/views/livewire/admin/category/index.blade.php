@@ -1,6 +1,6 @@
 <div>
     <!-- Modal -->
-    <div wire.ignore.self class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div wire:ignore.self class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -66,3 +66,10 @@
         </div>
     </div>
 </div>
+@push('script')
+<script>
+    window.addEventListener('close-modal', event => {
+        $('#deleteModal').modal('hide');
+    });
+</script>
+@endpush
