@@ -35,9 +35,9 @@
                   </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="pages/tables/basic-table.html">
-                      <i class="mdi mdi-grid-large menu-icon"></i>
-                      <span class="menu-title">Tables</span>
+                  <a class="nav-link" href="#">
+                      <i class="mdi mdi-monitor-multiple menu-icon"></i>
+                      <span class="menu-title">Brands</span>
                   </a>
               </li>
               <li class="nav-item">
