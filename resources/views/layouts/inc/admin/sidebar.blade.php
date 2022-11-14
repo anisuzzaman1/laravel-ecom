@@ -27,6 +27,19 @@
                   </div>
               </li>
 
+              <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#products" aria-expanded="false" aria-controls="ui-basic">
+                      <i class="mdi mdi-layers menu-icon"></i>
+                      <span class="menu-title">Product</span>
+                      <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="products">
+                      <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href="{{ url('admin/products/create') }}">Add Product</a></li>
+                          <li class="nav-item"> <a class="nav-link" href="{{ url('admin/products') }}">View Products</a></li>
+                      </ul>
+                  </div>
+              </li>
 
               <li class="nav-item">
                   <a class="nav-link" href="pages/charts/chartjs.html">
@@ -35,7 +48,7 @@
                   </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="{{ url('admin/brands') }}">
                       <i class="mdi mdi-monitor-multiple menu-icon"></i>
                       <span class="menu-title">Brands</span>
                   </a>
