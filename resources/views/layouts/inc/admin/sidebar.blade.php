@@ -28,7 +28,7 @@
               </li>
 
               <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#products" aria-expanded="false" aria-controls="ui-basic">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#products" aria-expanded="false" aria-controls="products">
                       <i class="mdi mdi-layers menu-icon"></i>
                       <span class="menu-title">Product</span>
                       <i class="menu-arrow"></i>
