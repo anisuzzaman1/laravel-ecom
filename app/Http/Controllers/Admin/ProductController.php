@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Brand;
+
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -15,7 +17,12 @@ class ProductController extends Controller
 
     public function create()
     {
-        $categories = Category::all();
-        return view('admin.products.create', compact('categories'));
+        $categories = Category::all()->sortBy('name');
+        $brands = Brand::all()->sortBy('name');
+        return view('admin.products.create', compact('categories', 'brands'));
+    }
+    public function store(ProductFormRequest $request)
+    {
+        # code...
     }
 }
