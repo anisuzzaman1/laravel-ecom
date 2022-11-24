@@ -11,6 +11,15 @@
                 </h3>
             </div>
             <div class="card-body">
+
+                @if ($errors->any())
+                <div class="alert alert-warning">
+                    @foreach ($errors->all() as $error)
+                    <div>{{$error}}</div>
+                    @endforeach
+                </div>
+                @endif
+
                 <form action="{{ url('admin/products') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -28,7 +37,7 @@
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <div class="tab-pane fade border p-3 show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 
                             <!-- Category Section      -->
                             <div class="mb-3">
@@ -51,7 +60,7 @@
                             <!-- Band Section -->
                             <div class="mb-3">
                                 <label>Select Brand</label>
-                                <select name="brand_id" id="" class="form-control">
+                                <select name="brand" id="" class="form-control">
                                     @foreach ($brands as $brand)
                                     <option value="{{ $brand->name }}">{{ $brand->name }}</option>
                                     @endforeach
@@ -68,7 +77,7 @@
                                 <textarea name="description" id="" rows="4" class="form-control"></textarea>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="seotag-tab-pane" role="tabpanel" aria-labelledby="seotag-tab" tabindex="0">
+                        <div class="tab-pane fade border p-3" id="seotag-tab-pane" role="tabpanel" aria-labelledby="seotag-tab" tabindex="0">
 
                             <!-- Meta Description section      -->
                             <div class="mb-3">
@@ -85,7 +94,7 @@
                             </div>
 
                         </div>
-                        <div class="tab-pane fade" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
+                        <div class="tab-pane fade border p-3" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
 
                             <!-- Price Section  -->
                             <div class="row">
@@ -121,8 +130,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="tab-pane fade" id="image-tab-pane" role="tabpanel" aria-labelledby="image-tab" tabindex="0">
+                        <div class="tab-pane fade border p-3" id="image-tab-pane" role="tabpanel" aria-labelledby="image-tab" tabindex="0">
 
                             <!-- Image Section  -->
                             <div class="mb-3">
