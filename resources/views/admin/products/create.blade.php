@@ -135,7 +135,7 @@
                             <!-- Image Section  -->
                             <div class="mb-3">
                                 <label>Upload Product Images</label>
-                                <input type="file" name="image" multiple class="form-control" />
+                                <input type="file" name="image[]" multiple class="form-control" />
                             </div>
                         </div>
                     </div>
