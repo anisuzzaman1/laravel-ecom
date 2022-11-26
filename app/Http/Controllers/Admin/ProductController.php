@@ -54,6 +54,7 @@ class ProductController extends Controller
             $uploadPath = 'uploads/products/';
 
             foreach ($request->file('image') as $imageFile) {
+                // $file = $request->file('image');
                 $extention = $imageFile->getClientOriginalExtension();
                 $filename = time() . '.' . $extention;
                 $file->move($uploadPath, $filename);
