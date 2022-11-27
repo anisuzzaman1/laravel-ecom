@@ -30,7 +30,9 @@
                         @forelse ($products as $product)
                         <tr>
                             <td>{{ $product->id }}</td>
-                            <td>{{ $product->category_id }}</td>
+                            @if($product->category)
+                            <td>{{ $product->category->name }}</td>
+                            @endif
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->selling_price }}</td>
                             <td>{{ $product->quantity }}</td>
