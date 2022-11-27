@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductFormRequest;
+
 use App\Models\Category;
 use App\Models\Brand;
+use App\Models\Product;
+
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
 // use Illuminate\\\\\
@@ -14,7 +17,8 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('admin.products.index');
+        $products = Product::all()->sortBy('name');
+        return view('admin.products.index', compact('products'));
     }
 
     public function create()
